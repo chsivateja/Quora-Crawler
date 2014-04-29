@@ -33,7 +33,7 @@ file_users_info = open("user_info.txt", mode='w')
 users_urls = file_users_urls.read()
 user_urls = users_urls.split('\n')
 
-
+uid=0
 #in this case
 #user_url = 'http://www.quora.com/Jessica-Hui'
 
@@ -55,10 +55,10 @@ for user_url in user_urls:
 	for topic_soup in topics_soup:
 		topic = topic_soup.get_text().encode('utf-8');
 		topics.append(topic)
+	uid+=1
+	user_wrapper={'user_id':uid, 'user_name':user_name, 'user_topics':topics}
 
-	user_wrapper={'user_name':user_name, 'user_topics':topics}
-
-	print str(user_wrapper)
+	print uid
 	file_users_info.write(str(user_wrapper)+'\n')
 
 

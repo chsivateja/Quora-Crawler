@@ -96,7 +96,7 @@ for i in range(0,len(question_urls)-1):
 			###crawl  answer_user_href
 			answer_user_href = answer_user_soup[0]['href'].encode('utf-8')
 			answer_user_url = 'https://www.quora.com'+answer_user_href
-			#file_answer_user_url.write(str(answer_user_url)+'\n')
+			file_answer_user_url.write(str(answer_user_url)+'\n')
 			print answer_user_href;
 			######
 			answer_user = (answer_user.strip()).encode("utf-8")

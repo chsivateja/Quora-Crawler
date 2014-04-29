@@ -8,8 +8,8 @@ import os
 import sys
 
 #use webdriver to get login cookies
-email="sjtudyyjk@126.com"
-password="13593006626yjk"
+email=""
+password=""
 
 driver = webdriver.Chrome()
 driver.get("http://www.quora.com")
